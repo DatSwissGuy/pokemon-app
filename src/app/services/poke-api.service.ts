@@ -14,7 +14,7 @@ export class PokeApiService {
 
   baseUrl = 'https://pokeapi.co/api/v2';
   offset = 0;
-  limit = 200;
+  limit = 151;
 
   getPokemon(offset: number = this.offset, limit: number = this.limit): Observable<PokeApiResponse<PokemonCollection>> {
     const queryParams: string[] = [
