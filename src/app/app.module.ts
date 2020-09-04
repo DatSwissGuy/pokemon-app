@@ -11,7 +11,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
     PokemonComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule
   ],
