@@ -1,4 +1,4 @@
 <div *ngFor="let pokemon of pokeApiResponse">
   <p>{{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}}</p>
-  <img src="{{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon').slice(0, -1)}}.png">
+  <img width="250" height="250" src="{{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
 </div>
