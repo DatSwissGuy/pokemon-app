@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PokemonApp"
+    }
+  },
+  "defaultProject": "PokemonApp",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
