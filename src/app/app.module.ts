@@ -17,7 +17,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     PokemonComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(reducers, {
