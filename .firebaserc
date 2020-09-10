@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pokemon-app-51156": {
+      "hosting": {
+        "pokemon-app": [
+          "pokemon-app-51156"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pokemon-app-51156"
+  }
+}

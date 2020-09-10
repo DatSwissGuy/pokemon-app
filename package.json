@@ -8,10 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run PokemonApp:serve-ssr",
-    "serve:ssr": "node dist/PokemonApp/server/main.js",
-    "build:ssr": "ng build --prod && ng run PokemonApp:server:production",
-    "prerender": "ng run PokemonApp:prerender"
+    "dev:ssr": "ng run pokemon-app:serve-ssr",
+    "serve:ssr": "node dist/pokemon-app/server/main.js",
+    "build:ssr": "ng build --prod && ng run pokemon-app:server:production",
+    "prerender": "ng run pokemon-app:prerender",
+    "build:firebase": "ng build --prod && ng run pokemon-app:server:production && cd functions && node cp-angular",
+    "deploy:firebase": "cd functions && firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -24,13 +26,14 @@
     "@angular/platform-browser-dynamic": "~10.1.1",
     "@angular/platform-server": "~10.1.1",
     "@angular/router": "~10.1.1",
-    "@nguniversal/express-engine": "^10.0.2",
-    "express": "^4.15.2",
     "@ngrx/effects": "^10.0.0",
     "@ngrx/router-store": "^10.0.0",
     "@ngrx/schematics": "^10.0.0",
     "@ngrx/store": "^10.0.0",
     "@ngrx/store-devtools": "^10.0.0",
+    "@nguniversal/express-engine": "^10.0.2",
+    "express": "^4.15.2",
+    "fs-extra": "^9.0.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
