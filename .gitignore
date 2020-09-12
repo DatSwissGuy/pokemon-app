@@ -41,7 +41,14 @@ yarn-error.log
 testem.log
 /typings
 
+
 # System Files
 .DS_Store
 Thumbs.db
 /.firebase
+
+# Environment variables for production
+/src/environments/environment.prod.ts
+
+# Package Lock (Better for multi OS dev)
+/package-lock.json
