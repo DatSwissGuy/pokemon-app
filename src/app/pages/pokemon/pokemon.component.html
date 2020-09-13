@@ -1,9 +1,9 @@
-<mat-card *ngFor="let pokemon of pokeApiResponse">
+<mat-card *ngFor="let pokemonItem of pokemonCollection">
   <mat-card-header>
     <div mat-card-avatar
-         style="background-size: cover; border-radius: initial; background-image: url({{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon').slice(0, -1)}}.png)"></div>
+         style="background-size: cover; border-radius: initial; background-image: url({{pokemonItem.url.replace('https://pokeapi.co/api/v2/pokemon','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon').slice(0, -1)}}.png)"></div>
     <mat-card-title>
-      {{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}}
+      {{pokemonItem.name.charAt(0).toUpperCase() + pokemonItem.name.slice(1)}}
     </mat-card-title>
     <mat-card-subtitle>
       Pokémon'
@@ -11,10 +11,10 @@
   </mat-card-header>
   <mat-card-content>
     <img
-      src="{{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
+      src="{{pokemonItem.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
   </mat-card-content>
   <mat-card-actions>
-    <button color="primary" mat-raised-button>GAMES</button>
-    <button color="accent" mat-raised-button>MOVES</button>
+    <button color="primary" mat-flat-button>BUTTON</button>
   </mat-card-actions>
 </mat-card>
+ee
