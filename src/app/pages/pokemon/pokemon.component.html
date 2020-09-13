@@ -1,4 +1,11 @@
-<div *ngFor="let pokemon of pokeApiResponse">
-  <h1>{{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}}</h1>
-  <img src="{{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
-</div>
+<mat-card *ngFor="let pokemon of pokeApiResponse">
+  <mat-card-title>
+    {{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}}
+  </mat-card-title>
+  <mat-card-subtitle>
+    Pokémon
+  </mat-card-subtitle>
+  <mat-card-content>
+    <img src="{{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
+  </mat-card-content>
+</mat-card>
