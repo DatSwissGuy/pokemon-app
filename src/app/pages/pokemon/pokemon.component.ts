@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
-
+import { PokemonCollection } from '../../model/pokemon-collection';
 
 @Component({
   selector: 'app-pokemon',
@@ -9,15 +9,14 @@ import { PokeApiService } from '../../services/poke-api.service';
 })
 export class PokemonComponent implements OnInit {
 
+  pokemonCollection: PokemonCollection[];
+
   constructor(private pokeApiService: PokeApiService) {
   }
 
-  pokeApiResponse: any;
-
   ngOnInit(): void {
-    this.pokeApiService.getPokemonCollection().subscribe(
-      response => this.pokeApiResponse = response.results
+    this.pokeApiService.getPokemon().subscribe(
+      pokeApiResponse => this.pokemonCollection = pokeApiResponse.results
     );
   }
-
 }

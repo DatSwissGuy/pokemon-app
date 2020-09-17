@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, take } from 'rxjs/operators';
@@ -11,14 +11,13 @@ import { PokemonItem } from '../model/pokemon-item';
 })
 export class PokeApiService {
 
+  constructor(private http: HttpClient) {
+  }
+
   pokeApi = 'https://pokeapi.co/api/v2';
   pokemonEndpoint = `/pokemon`;
   // Returns the first 151 PoKémon (Red, Blue, Yellow)
   offset = 0;
-
-  constructor(private http: HttpClient) {
-  }
-
   limit = 151;
 
   getPokemonCollection(offset: number = this.offset, limit: number = this.limit): Observable<PokeApiResponse<PokemonCollection>> {
