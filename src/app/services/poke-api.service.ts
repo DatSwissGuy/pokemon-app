@@ -11,14 +11,14 @@ import { PokemonItem } from '../model/pokemon-item';
 })
 export class PokeApiService {
 
-  constructor(private http: HttpClient) {
-  }
-
   pokeApi = 'https://pokeapi.co/api/v2';
   pokemonEndpoint = `/pokemon`;
   // Returns the first 151 PoKémon (Red, Blue, Yellow)
   offset = 0;
   limit = 151;
+
+  constructor(private http: HttpClient) {
+  }
 
   getPokemonCollection(offset: number = this.offset, limit: number = this.limit): Observable<PokeApiResponse<PokemonCollection>> {
     const queryParams: string[] = [`offset=${offset}`, `limit=${limit}`];
@@ -29,7 +29,7 @@ export class PokeApiService {
       );
   }
 
-  getPokemonItem(queryParam: any, pokemonId: number): Observable<PokeApiResponse<PokemonItem>> {
+  getPokemon(queryParam: any, pokemonId: number): Observable<PokeApiResponse<PokemonItem>> {
     const queryParams: string[] = [`param=${queryParam}`];
     return this.http.get<any>(`${this.pokeApi}/${this.pokemonEndpoint}/${pokemonId}?${queryParams.join('&')}`)
       .pipe(
