@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {map, take} from 'rxjs/operators';
@@ -10,7 +10,8 @@ import {PokemonCollection} from '../model/pokemon-collection';
 })
 export class PokeApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   baseUrl = 'https://pokeapi.co/api/v2';
   offset = 0;

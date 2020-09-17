@@ -1,8 +1,10 @@
-div {
-  border: 1px solid #DDDDDD;
-  border-radius: 5px;
-  width: max-content;
+mat-card {
   margin: 1rem;
-  text-align: center;
   display: inline-block;
+
+  img {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+  }
 }
