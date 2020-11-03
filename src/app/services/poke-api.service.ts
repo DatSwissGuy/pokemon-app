@@ -12,7 +12,7 @@ import { PokemonItem } from '../model/pokemon-item';
 export class PokeApiService {
 
   pokeApi = 'https://pokeapi.co/api/v2';
-  pokemonEndpoint = `/pokemon`;
+  pokemonEndpoint = `pokemon`;
   // Returns the first 151 PoKémon (Red, Blue, Yellow)
   offset = 0;
 
