@@ -14,14 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { HeaderComponent } from "./components/header/header.component";
-import { MatDividerModule } from "@angular/material/divider";
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -37,7 +35,7 @@ import { MatDividerModule } from "@angular/material/divider";
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    MatDividerModule
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
