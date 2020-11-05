@@ -22,7 +22,7 @@ export class PokeApiService {
 
   getPokemonCollection(offset: number = this.offset, limit: number = this.limit): Observable<PokeApiResponse<PokemonCollection>> {
     const queryParams: string[] = [`offset=${offset}`, `limit=${limit}`];
-    return this.http.get<any>(`${this.pokeApi}/${this.pokemonEndpoint}?${queryParams.join('&')}`)
+    return this.http.get<PokeApiResponse<PokemonCollection>>(`${this.pokeApi}/${this.pokemonEndpoint}?${queryParams.join('&')}`)
       .pipe(
         map(response => response),
         take(1)

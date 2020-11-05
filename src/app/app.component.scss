@@ -1,15 +1,4 @@
-.header {
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
-
-  img {
-    display: inline;
-    height: 50px;
-  }
-}
-
-.content {
+.router-outlet {
   position: relative;
   top: 50 + 15px;
 }
