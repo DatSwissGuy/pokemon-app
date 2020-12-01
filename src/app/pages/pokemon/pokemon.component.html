@@ -1,17 +1,17 @@
 <div class="pokemon-list-container">
   <mat-card *ngFor="let pokemonItem of pokemonCollection">
     <mat-card-header>
-      <div mat-card-avatar class="pokemon-card-avatar" style="background-image: url({{pokemonItem.url.replace('https://pokeapi.co/api/v2/pokemon','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon').slice(0, -1)}}.png)">
+      <div mat-card-avatar class="pokemon-card-avatar" style="background-image: url({{getPokemonPngUrl(pokemonItem.url)}}.png)">
       </div>
       <mat-card-title>
-        {{pokemonItem.name.charAt(0).toUpperCase() + pokemonItem.name.slice(1)}}
+        {{pokemonNameToUpperCase(pokemonItem.name)}}
       </mat-card-title>
       <mat-card-subtitle>
         Pokémon
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img src="{{pokemonItem.url.replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world').slice(0, -1)}}.svg">
+      <img src="{{getPokemonSvgUrl(pokemonItem.url)}}.svg">
     </mat-card-content>
   </mat-card>
 </div>
