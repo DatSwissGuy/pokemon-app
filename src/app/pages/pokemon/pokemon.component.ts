@@ -15,8 +15,19 @@ export class PokemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pokeApiService.getPokemon().subscribe(
+    this.pokeApiService.getPokemonCollection().subscribe(
       pokeApiResponse => this.pokemonCollection = pokeApiResponse.results
     );
+  }
+
+  pokemonNameToUpperCase(pokemonName: string): string {
+    return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
+  }
+
+  getPokemonSvgUrl(pokemonUrl: string): string {
+    return pokemonUrl
+      .replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
+      .slice(0, -1)
+    + '.svg';
   }
 }

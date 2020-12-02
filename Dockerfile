@@ -1,5 +1,5 @@
 # Base image
-FROM node:14.2.0-alpine3.11
+FROM node:lts-alpine
 # Working directory, duh...
 WORKDIR /app
 # Add binaries to path
@@ -10,6 +10,7 @@ RUN npm install -g @angular/cli
 COPY ./package.json /app
 # Install dependencies
 RUN npm install --silent
+# Copy files
 COPY . /app
 # Build the app
 RUN npm run build:ssr
