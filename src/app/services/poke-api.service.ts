@@ -46,5 +46,13 @@ export class PokeApiService {
         take(1)
       );
   }
+
+  getGeneration(generationId: string): Observable<PokeApiResponse<any>> {
+    return this.http.get<any>(`${this.pokeApi})/${this.generationEndpoint}/${generationId}`)
+      .pipe(
+        map(response => response),
+        take(1)
+      );
+  }
 }
 
