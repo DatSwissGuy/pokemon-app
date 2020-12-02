@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, take } from 'rxjs/operators';
 import { PokeApiResponse } from '../model/poke-api-response';
 import { PokemonCollection } from '../model/pokemon-collection';
-import { PokemonItem } from '../model/pokemon-item';
+import { PokemonCollectionItem } from '../model/pokemon-collection-item';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,9 @@ import { PokemonItem } from '../model/pokemon-item';
 export class PokeApiService {
 
   pokeApi = 'https://pokeapi.co/api/v2';
-  pokemonEndpoint = `pokemon`;
-  // Returns the first 151 PoKémon (Red, Blue, Yellow)
+  pokemonEndpoint = 'pokemon';
+  generationEndpoint = 'generation';
+  // Returns the first 151 Pokémon (Red, Blue, Yellow)
   offset = 0;
   limit = 151;
 
@@ -29,9 +30,17 @@ export class PokeApiService {
       );
   }
 
-  getPokemon(queryParam: any, pokemonId: number): Observable<PokeApiResponse<PokemonItem>> {
+  getPokemon(queryParam: any, pokemonId: number): Observable<PokeApiResponse<PokemonCollectionItem>> {
     const queryParams: string[] = [`param=${queryParam}`];
     return this.http.get<any>(`${this.pokeApi}/${this.pokemonEndpoint}/${pokemonId}?${queryParams.join('&')}`)
+      .pipe(
+        map(response => response),
+        take(1)
+      );
+  }
+
+  getGenerationCollection(): Observable<PokeApiResponse<any>> {
+    return this.http.get<any>(`${this.pokeApi}/${this.generationEndpoint}`)
       .pipe(
         map(response => response),
         take(1)

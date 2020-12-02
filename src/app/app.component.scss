@@ -6,6 +6,7 @@ mat-toolbar {
     right: 0;
     left: 0;
     z-index: 10;
+    height: 65px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
   }
 
@@ -22,14 +23,17 @@ mat-sidenav-container {
     top: 65px;
 
     mat-nav-list {
+
       .mat-icon{
-        padding: 0 15px;
+        padding-right: 15px;
       }
     }
   }
 
   mat-sidenav-content {
     position: relative;
-    top: 50 + 15px;
+    top: 65 + 5px;
+    min-height: 100vh;
+    margin-bottom: 65 + 5px;
   }
 }

@@ -1,8 +1,6 @@
 <div class="pokemon-list-container">
   <mat-card *ngFor="let pokemonItem of pokemonCollection">
     <mat-card-header>
-      <div mat-card-avatar class="pokemon-card-avatar" style="background-image: url({{getPokemonPngUrl(pokemonItem.url)}}.png)">
-      </div>
       <mat-card-title>
         {{pokemonNameToUpperCase(pokemonItem.name)}}
       </mat-card-title>
@@ -11,7 +9,7 @@
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img src="{{getPokemonSvgUrl(pokemonItem.url)}}.svg">
+      <img src="{{getPokemonSvgUrl(pokemonItem.url)}}" alt="">
     </mat-card-content>
   </mat-card>
 </div>
