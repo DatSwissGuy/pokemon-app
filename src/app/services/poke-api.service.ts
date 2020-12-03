@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, take } from 'rxjs/operators';
 import { PokeApiResponse } from '../model/poke-api-response';
 import { PokemonCollection } from '../model/pokemon-collection';
-import { PokemonCollectionItem } from '../model/pokemon-collection-item';
+import { GenerationCollection } from '../model/generation-collection';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class PokeApiService {
       );
   }
 
-  getPokemon(queryParam: any, pokemonId: number): Observable<PokeApiResponse<PokemonCollectionItem>> {
+  getPokemon(queryParam: any, pokemonId: number): Observable<any> {
     const queryParams: string[] = [`param=${queryParam}`];
     return this.http.get<any>(`${this.pokeApi}/${this.pokemonEndpoint}/${pokemonId}?${queryParams.join('&')}`)
       .pipe(
@@ -39,7 +39,7 @@ export class PokeApiService {
       );
   }
 
-  getGenerationCollection(): Observable<PokeApiResponse<any>> {
+  getGenerationCollection(): Observable<PokeApiResponse<GenerationCollection>> {
     return this.http.get<any>(`${this.pokeApi}/${this.generationEndpoint}`)
       .pipe(
         map(response => response),
@@ -47,7 +47,7 @@ export class PokeApiService {
       );
   }
 
-  getGeneration(generationId: string): Observable<PokeApiResponse<any>> {
+  getGeneration(generationId: string): Observable<any> {
     return this.http.get<any>(`${this.pokeApi})/${this.generationEndpoint}/${generationId}`)
       .pipe(
         map(response => response),
@@ -55,4 +55,3 @@ export class PokeApiService {
       );
   }
 }
-
