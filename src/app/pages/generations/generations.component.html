@@ -1,9 +1,12 @@
 <div class="generation-list-container">
-  <mat-card *ngFor="let generationItem of generationCollection" [routerLink]="''">
+  <mat-card *ngFor="let generationItem of generationCollection">
     <mat-card-header>
       <mat-card-title>
-        {{generationNameToUpperCase(generationItem.name)}}
+        {{formatGenerationName(generationItem.name)}}
       </mat-card-title>
+      <mat-card-subtitle>
+        {{getGamesForGeneration(generationItem.name)}}
+      </mat-card-subtitle>
     </mat-card-header>
   </mat-card>
 </div>
