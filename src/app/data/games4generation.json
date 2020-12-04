@@ -1,10 +1,36 @@
 {
-  "generation-i": "Pokémon Red, Blue and Yellow",
-  "generation-ii": "Pokémon Silver, Gold and Crystal",
-  "generation-iii": "Pokémon Ruby, Sapphire, FireRed, LeafGreen, Emerald",
-  "generation-iv": "Pokémon Diamond, Pearl, Platinum, HeartGold and SoulSilver",
-  "generation-v": "Pokémon Black, White, Black 2 and White 2",
-  "generation-vi": "Pokémon X, Y, Omega Ruby and Alpha Sapphire",
-  "generation-vii": "Pokémon Sun, Moon, Ultra Sun, Ultra Moon, Pokémon: Let's Go, Pickachu! and Pokémon Let's Go, Evee! ",
-  "generation-viii": "Pokémon Sword and Shield"
+  "results": [
+    {
+      "name": "Generation I",
+      "games": "Pokémon Red, Blue and Yellow"
+    },
+    {
+      "name": "Generation II",
+      "games": "Pokémon Silver, Gold and Crystal"
+    },
+    {
+      "name": "Generation III",
+      "games": "Pokémon Ruby, Sapphire, FireRed, LeafGreen, Emerald"
+    },
+    {
+      "name": "Generation IV",
+      "games": "Pokémon Diamond, Pearl, Platinum, HeartGold and SoulSilver"
+    },
+    {
+      "name": "Generation V",
+      "games": "Pokémon Black, White, Black 2 and White 2"
+    },
+    {
+      "name": "Generation VI",
+      "games": "Pokémon X, Y, Omega Ruby and Alpha Sapphire"
+    },
+    {
+      "name": "Generation VII",
+      "games": "Pokémon Sun, Moon, Ultra Sun, Ultra Moon, Pokémon: Let's Go, Pickachu! and Pokémon Let's Go, Evee!"
+    },
+    {
+      "name": "Generation VIII",
+      "games": "Pokémon Sword and Shield"
+    }
+  ]
 }

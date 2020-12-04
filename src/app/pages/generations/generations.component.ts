@@ -28,24 +28,25 @@ export class GenerationsComponent implements OnInit {
     return `${uppercaseName} ${romanNumeralsUppercase}`;
   }
 
+  // TODO find a more elegant solution...
   getGamesForGeneration(generationName: string): string {
-    switch (generationName) {
-      case 'generation-i':
-        return games4Generation['generation-i'].valueOf();
-      case 'generation-ii':
-        return games4Generation['generation-ii'].valueOf();
-      case 'generation-iii':
-        return games4Generation['generation-iii'].valueOf();
-      case 'generation-iv':
-        return games4Generation['generation-iv'].valueOf();
-      case 'generation-v':
-        return games4Generation['generation-v'].valueOf();
-      case 'generation-vi':
-        return games4Generation['generation-vi'].valueOf();
-      case 'generation-vii':
-        return games4Generation['generation-vii'].valueOf();
-      case 'generation-viii':
-        return games4Generation['generation-viii'].valueOf();
+    switch (generationName.substring(11)) {
+      case 'i':
+        return games4Generation.results[0].games;
+      case 'ii':
+        return games4Generation.results[1].games;
+      case 'iii':
+        return games4Generation.results[2].games;
+      case 'iv':
+        return games4Generation.results[3].games;
+      case 'v':
+        return games4Generation.results[4].games;
+      case 'vi':
+        return games4Generation.results[5].games;
+      case 'vii':
+        return games4Generation.results[6].games;
+      case 'viii':
+        return games4Generation.results[7].games;
     }
   }
 }
