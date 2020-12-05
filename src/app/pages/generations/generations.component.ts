@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
 import { GenerationCollection } from '../../model/generation-collection';
-import { games4generation} from '../../data/games4generation';
+import { gamesForGeneration} from '../../data/gamesForGeneration';
 
 @Component({
   selector: 'app-generations',
@@ -32,21 +32,21 @@ export class GenerationsComponent implements OnInit {
   getGamesForGeneration(generationName: string): string {
     switch (generationName.substring(11)) {
       case 'i':
-        return games4generation.generation1;
+        return gamesForGeneration.generationOne;
       case 'ii':
-        return games4generation.generation2;
+        return gamesForGeneration.generationTwo;
       case 'iii':
-        return games4generation.generation3;
+        return gamesForGeneration.generationThree;
       case 'iv':
-        return games4generation.generation4;
+        return gamesForGeneration.generationFour;
       case 'v':
-        return games4generation.generation5;
+        return gamesForGeneration.generationFive;
       case 'vi':
-        return games4generation.generation6;
+        return gamesForGeneration.generationSix;
       case 'vii':
-        return games4generation.generation7;
+        return gamesForGeneration.generationSeven;
       case 'viii':
-        return games4generation.generation8;
+        return gamesForGeneration.generationEight;
     }
   }
 }
