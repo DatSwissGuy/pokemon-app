@@ -6,6 +6,11 @@ div.generation-list-container {
   mat-card {
     margin: 1rem;
     width: 200px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
 
     div.generation-card-avatar {
       background-size: cover;

@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { GenerationsComponent } from './pages/generations/generations.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -19,18 +20,19 @@ import { GenerationsComponent } from './pages/generations/generations.component'
     PokemonComponent,
     GenerationsComponent,
   ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'serverApp'}),
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule
-  ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'serverApp'}),
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatRippleModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
