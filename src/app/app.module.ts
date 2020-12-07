@@ -13,12 +13,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { GenerationsComponent } from './pages/generations/generations.component';
 import { MatRippleModule } from '@angular/material/core';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonComponent,
     GenerationsComponent,
+    FooterComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
