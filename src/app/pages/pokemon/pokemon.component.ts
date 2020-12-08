@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PokeApiService} from '../../services/poke-api.service';
-
+import { PokeApiService } from '../../services/poke-api.service';
+import { PokemonCollection } from '../../model/pokemon-collection';
 
 @Component({
   selector: 'app-pokemon',
@@ -9,14 +9,25 @@ import {PokeApiService} from '../../services/poke-api.service';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor(private pokeApiService: PokeApiService) { }
+  pokemonCollection: PokemonCollection[];
 
-  pokeApiResponse: any;
+  constructor(private pokeApiService: PokeApiService) {
+  }
 
   ngOnInit(): void {
-    this.pokeApiService.getPokemon().subscribe(
-      response => this.pokeApiResponse = response.results
+    this.pokeApiService.getPokemonCollection().subscribe(
+      pokeApiResponse => this.pokemonCollection = pokeApiResponse.results
     );
   }
 
+  pokemonNameToUpperCase(pokemonName: string): string {
+    return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
+  }
+
+  getPokemonSvgUrl(pokemonUrl: string): string {
+    return pokemonUrl
+      .replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
+      .slice(0, -1)
+    + '.svg';
+  }
 }

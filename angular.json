@@ -173,8 +173,5 @@
       }
     }
   },
-  "defaultProject": "pokemon-app",
-  "cli": {
-    "defaultCollection": "@ngrx/schematics"
-  }
+  "defaultProject": "pokemon-app"
 }

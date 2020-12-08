@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<mat-toolbar class="mat-toolbar">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <img src="assets/PokeNg.png" alt="" class="pokeng-logo">
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="mat-sidenav-container">
+  <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="''"><mat-icon class="mat-icon">home</mat-icon>HOME</a>
+      <a mat-list-item [routerLink]="'generations'"><mat-icon class="mat-icon">groups</mat-icon>GENERATIONS</a>
+      <a mat-list-item [routerLink]="'games'"><mat-icon class="mat-icon">games</mat-icon>GAMES</a>
+      <a mat-list-item [routerLink]="'abilities'"><mat-icon class="mat-icon">local_fire_department</mat-icon>ABILITIES</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>
