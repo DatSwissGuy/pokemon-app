@@ -22,8 +22,8 @@ export class GenerationsComponent implements OnInit {
   }
 
   formatGenerationName(generationName: string): string {
-    const stringWithoutNumber = generationName.substring(0, 10);
-    const uppercaseName = stringWithoutNumber.charAt(0).toUpperCase() + stringWithoutNumber.slice(1);
+    const nameWithoutNumber = generationName.substring(0, 10);
+    const uppercaseName = nameWithoutNumber.charAt(0).toUpperCase() + nameWithoutNumber.slice(1);
     const romanNumeralsUppercase = generationName.substring(11).toUpperCase();
     return `${uppercaseName} ${romanNumeralsUppercase}`;
   }
