@@ -1,0 +1,5 @@
+<p>ID: {{generation?.id}}</p>
+<p>Generation: {{generation?.name}}</p>
+<p *ngFor="let pokemon of generation?.pokemon_species">
+  Pokemon Name: {{pokemon.name}} {{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon-species/', '').slice(0, -1)}}
+</p>
