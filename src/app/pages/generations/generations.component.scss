@@ -3,6 +3,10 @@ div.generation-list-container {
   flex-wrap: wrap;
   justify-content: center;
 
+  a {
+    text-decoration: none;
+  }
+
   mat-card {
     margin: 1rem;
     width: 200px;

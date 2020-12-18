@@ -1,5 +1,16 @@
-<p>ID: {{generation?.id}}</p>
-<p>Generation: {{generation?.name}}</p>
-<p *ngFor="let pokemon of generation?.pokemon_species">
-  Pokemon Name: {{pokemon.name}} {{pokemon.url.replace('https://pokeapi.co/api/v2/pokemon-species/', '').slice(0, -1)}}
-</p>
+<div class="pokemon-list-container">
+  <mat-card *ngFor="let pokemon of generation?.pokemon_species">
+    <mat-card-header>
+      <mat-card-title>
+        {{nameToUpperCase(pokemon.name)}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span>Games: </span>
+        <span>{{formatVersionGroups(generation)}}</span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img src="{{getPokemonSvgUrl(pokemon.url)}}" alt="">
+    </mat-card-content>
+  </mat-card>
+</div>
