@@ -1,11 +1,14 @@
+$mat-toolbar-height: 65px;
+$mat-toolbar-width: 200px;
+
 @media (max-width: 600px) {
-  
-  mat-toolbar {
+
+  mat-toolbar {
     &.mat-toolbar {
       display: flex;
       justify-content: center;
-    } 
-  }  
+    }
+  }
 }
 
 mat-toolbar {
@@ -16,7 +19,7 @@ mat-toolbar {
     right: 0;
     left: 0;
     z-index: 10;
-    height: 65px;
+    height: $mat-toolbar-height;
     display: flex;
     justify-content: center;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
@@ -32,7 +35,8 @@ mat-sidenav-container {
 
   mat-sidenav {
     position: fixed;
-    top: 65px;
+    top: $mat-toolbar-height;
+    width: $mat-toolbar-width;
 
     mat-nav-list {
 
@@ -44,7 +48,7 @@ mat-sidenav-container {
 
   mat-sidenav-content {
     position: relative;
-    top: 65 + 5px;
+    top: $mat-toolbar-height + 5px;
     min-height: 100vh;
     margin-bottom: 65 + 5px;
   }

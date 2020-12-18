@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +9,15 @@ import { isPlatformBrowser } from '@angular/common';
 export class AppComponent implements OnDestroy {
   title = 'PokéNg';
   mobileQuery: MediaQueryList;
-  mobileQueryListener: () => void;
+  private readonly mobileQueryListener: () => void;
 
   constructor(
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
+    private changeDetectorRef: ChangeDetectorRef,
+    private media: MediaMatcher,
     @Inject(PLATFORM_ID) private platformId: any
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
-
     if (this.platformId === 'browser') {
       this.mobileQuery.addEventListener('change', () => this.mobileQueryListener);
     }
