@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, take } from 'rxjs/operators';
 import { PokeApiResponse } from '../model/poke-api-response';
 import { PokemonCollection } from '../model/pokemon-collection';
 import { GenerationCollection } from '../model/generation-collection';
+import { GenerationCollectionItem } from '../model/generation-collection-item';
 
 @Injectable({
   providedIn: 'root'
@@ -47,8 +48,8 @@ export class PokeApiService {
       );
   }
 
-  getGeneration(generationId: string): Observable<any> {
-    return this.http.get<any>(`${this.pokeApi})/${this.generationEndpoint}/${generationId}`)
+  getGeneration(generationId: number): Observable<GenerationCollectionItem> {
+    return this.http.get<any>(`${this.pokeApi}/${this.generationEndpoint}/${generationId}`)
       .pipe(
         map(response => response),
         take(1)
