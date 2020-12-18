@@ -26,8 +26,8 @@ export class PokemonComponent implements OnInit {
 
   getPokemonSvgUrl(pokemonUrl: string): string {
     return pokemonUrl
-      .replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
-      .slice(0, -1)
-    + '.svg';
+        .replace('https://pokeapi.co/api/v2/pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
+        .slice(0, -1)
+        .concat('.svg');
   }
 }
