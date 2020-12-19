@@ -24,7 +24,7 @@ export class GenerationComponent implements OnInit {
     return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
   }
 
-  formatVersionGroups(versionGroups: GenerationCollectionItem): unknown {
+  formatVersionGroups(versionGroups: GenerationCollectionItem): string {
     let versionGroupsString = '';
     versionGroups.version_groups.map(games => versionGroupsString += `${games.name.replace('-', ' ')} `);
     const gamesArray = versionGroupsString.split(' ').map(games => this.nameToUpperCase(games));
