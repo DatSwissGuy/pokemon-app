@@ -15,9 +15,9 @@ export class PokeApiService {
   pokeApi = 'https://pokeapi.co/api/v2';
   pokemonEndpoint = 'pokemon';
   generationEndpoint = 'generation';
-  // Returns the first 151 Pokémon (Red, Blue, Yellow)
+  // Returns the first 251 Pokémon (Gen 1+2)
   offset = 0;
-  limit = 151;
+  limit = 251;
 
   constructor(private http: HttpClient) {
   }
