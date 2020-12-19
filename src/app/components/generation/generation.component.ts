@@ -24,10 +24,13 @@ export class GenerationComponent implements OnInit {
     return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
   }
 
-  formatVersionGroups(versionGroups: GenerationCollectionItem): string {
-    let gamesList = '';
-    versionGroups.version_groups.forEach(games => gamesList += `${games.name.replace('-', ' ')} `);
-    return gamesList;
+  formatVersionGroups(versionGroups: GenerationCollectionItem): unknown {
+    let versionGroupsString = '';
+    versionGroups.version_groups.map(games => versionGroupsString += `${games.name.replace('-', ' ')} `);
+    const gamesArray = versionGroupsString.split(' ').map(games => this.nameToUpperCase(games));
+    const gamesList = gamesArray.join(', ');
+    // remove last commma and space
+    return gamesList.slice(0, -2);
   }
 
   getPokemonSvgUrl(pokemonUrl: string): string {
