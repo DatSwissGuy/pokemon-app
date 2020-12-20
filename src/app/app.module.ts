@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { GenerationsComponent } from './pages/generations/generations.component';
 import { MatRippleModule } from '@angular/material/core';
 import { FooterComponent } from './components/footer/footer.component';
+import { GenerationComponent } from './components/generation/generation.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     PokemonComponent,
     GenerationsComponent,
     FooterComponent,
+    GenerationComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
