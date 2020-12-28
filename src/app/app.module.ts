@@ -15,6 +15,8 @@ import { GenerationsComponent } from './pages/generations/generations.component'
 import { MatRippleModule } from '@angular/material/core';
 import { FooterComponent } from './components/footer/footer.component';
 import { GenerationComponent } from './components/generation/generation.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { GenerationComponent } from './components/generation/generation.componen
         MatToolbarModule,
         MatSidenavModule,
         MatListModule,
-        MatRippleModule
+        MatRippleModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
   providers: [],
   bootstrap: [AppComponent]
