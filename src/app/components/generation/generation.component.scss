@@ -1,22 +1,12 @@
-div.generation-list-container {
+div.pokemon-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  a {
-    text-decoration: none;
-  }
-
   mat-card {
     margin: 1rem;
-    width: 200px;
-    cursor: pointer;
 
-    &:focus {
-      outline: none;
-    }
-
-    div.generation-card-avatar {
+    div.pokemon-card-avatar {
       background-size: cover;
       border-radius: initial;
     }

@@ -1,0 +1,16 @@
+<div class="pokemon-list-container">
+  <mat-card *ngFor="let pokemon of generation?.pokemon_species">
+    <mat-card-header>
+      <mat-card-title>
+        {{nameToUpperCase(pokemon.name)}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span>Added in generation {{generation.name.slice(-1).toUpperCase()}}: </span>
+        <span>{{formatVersionGroups(generation)}}</span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img src="{{getPokemonSvgUrl(pokemon.url)}}" alt="">
+    </mat-card-content>
+  </mat-card>
+</div>
