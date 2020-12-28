@@ -1,6 +1,6 @@
 {
-  "name": "pokemon-app",
-  "short_name": "pokemon-app",
+  "name": "PokéNG",
+  "short_name": "poke-ng",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
