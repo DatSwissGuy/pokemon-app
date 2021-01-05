@@ -1,7 +1,7 @@
 {
   "name": "PokéNG",
   "short_name": "poke-ng",
-  "theme_color": "#f5f5f5",
+  "theme_color": "#5f5f5f",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

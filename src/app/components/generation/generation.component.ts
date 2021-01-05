@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
-import { GenerationCollectionItem } from '../../model/generation-collection-item';
+import { Generation } from '../../model/items/generation';
 
 @Component({
   selector: 'app-generation',
@@ -9,7 +9,7 @@ import { GenerationCollectionItem } from '../../model/generation-collection-item
 })
 export class GenerationComponent implements OnInit {
 
-  generation: GenerationCollectionItem;
+  generation: Generation;
 
   constructor(private pokeApiService: PokeApiService) {
   }
@@ -24,7 +24,7 @@ export class GenerationComponent implements OnInit {
     return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
   }
 
-  formatVersionGroups(versionGroups: GenerationCollectionItem): string {
+  formatVersionGroups(versionGroups: Generation): string {
     let versionGroupsString = '';
     versionGroups.version_groups.map(games => versionGroupsString += `${games.name.replace('-', ' ')} `);
     const gamesArray = versionGroupsString.split(' ').map(games => this.nameToUpperCase(games));

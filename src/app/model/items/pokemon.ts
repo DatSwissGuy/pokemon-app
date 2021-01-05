@@ -1,4 +1,4 @@
-export interface PokemonItem {
+export interface Pokemon {
   name: string;
   order: number;
   sprites: object;

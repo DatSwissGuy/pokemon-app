@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
-import { GenerationCollection } from '../../model/generation-collection';
+import { GenerationCollection } from '../../model/collections/generation-collection';
 import { gamesForGeneration} from '../../data/gamesForGeneration';
 
 @Component({
