@@ -7,7 +7,7 @@ import { GenerationComponent } from './components/generation/generation.componen
 const routes: Routes = [
   {path: '', component: PokemonComponent},
   {path: 'generations', component: GenerationsComponent},
-  {path: 'generations/1', component: GenerationComponent}
+  {path: 'generations/:id', component: GenerationComponent}
 ];
 
 @NgModule({
