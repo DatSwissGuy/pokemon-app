@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
-import { GenerationCollectionItem } from '../../model/generation-collection-item';
 import { ActivatedRoute } from '@angular/router';
 import { Generation } from '../../model/items/generation';
 
@@ -11,7 +10,6 @@ import { Generation } from '../../model/items/generation';
 })
 export class GenerationComponent implements OnInit {
 
-  generation: GenerationCollectionItem;
   generationId: number;
   generation: Generation;
 
