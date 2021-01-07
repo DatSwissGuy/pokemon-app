@@ -16,7 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GenerationComponent } from './components/generation/generation.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { HomeComponent } from './pages/home/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [

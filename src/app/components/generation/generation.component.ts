@@ -24,8 +24,6 @@ export class GenerationComponent implements OnInit {
     this.pokeApiService.getGeneration(this.generationId).subscribe(
       pokeApiResponse => this.generation = pokeApiResponse
     );
-
-    console.log(this.generationId);
   }
 
   nameToUpperCase(pokemonName: string): string {
@@ -41,14 +39,14 @@ export class GenerationComponent implements OnInit {
     return gamesList.slice(0, -2);
   }
 
-  getPokemonDreamworld(pokemonUrl: string): string {
+  getPokemonDreamworldImage(pokemonUrl: string): string {
     return pokemonUrl
       .replace('https://pokeapi.co/api/v2/pokemon-species', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
       .slice(0, -1)
       .concat('.svg');
   }
 
-  getPokemonArtwork(pokemonUrl: string): string {
+  getPokemonArtworkImage(pokemonUrl: string): string {
     return pokemonUrl
       .replace('https://pokeapi.co/api/v2/pokemon-species', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork')
       .slice(0, -1)

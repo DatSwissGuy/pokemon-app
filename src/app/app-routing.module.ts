@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GenerationsComponent } from './pages/generations/generations.component';
 import { GenerationComponent } from './components/generation/generation.component';
-import { HomeComponent } from './pages/home/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
