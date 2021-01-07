@@ -4,6 +4,7 @@
       <mat-card-title>
         {{nameToUpperCase(pokemon.name)}}
       </mat-card-title>
+      <mat-card-subtitle>Generation {{formatGenerationName(generation.name)}} Pokémon</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <img src="{{getPokemonArtworkImage(pokemon.url)}}" alt="">

@@ -39,6 +39,10 @@ export class GenerationComponent implements OnInit {
     return gamesList.slice(0, -2);
   }
 
+  formatGenerationName(generationName: string): string {
+    return generationName.replace('generation-', '').toUpperCase();
+  }
+
   getPokemonDreamworldImage(pokemonUrl: string): string {
     return pokemonUrl
       .replace('https://pokeapi.co/api/v2/pokemon-species', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')
