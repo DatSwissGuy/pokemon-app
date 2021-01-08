@@ -4,7 +4,10 @@
       <mat-card-title>
         {{nameToUpperCase(pokemon.name)}}
       </mat-card-title>
-      <mat-card-subtitle>Generation {{formatGenerationName(generation.name)}} Pokémon</mat-card-subtitle>
+      <mat-card-subtitle>
+        <p class="pokemon-card-subtitle">Generation {{formatGenerationName(generation.name)}} Pokémon</p>
+        <p class="pokemon-card-subtitle">Main region: {{nameToUpperCase(generation.main_region.name)}}</p>
+      </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <img src="{{getPokemonArtworkImage(pokemon.url)}}" alt="">

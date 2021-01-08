@@ -6,14 +6,17 @@ div.pokemon-list-container {
   mat-card {
     margin: 1rem;
 
-    div.pokemon-card-avatar {
-      background-size: cover;
-      border-radius: initial;
+    mat-card-subtitle {
+      p {
+        margin: 0;
+      }
     }
 
-    img {
-      width: 150px;
-      height: 150px;
+    mat-card-content {
+      img {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }
