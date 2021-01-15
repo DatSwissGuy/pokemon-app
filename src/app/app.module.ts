@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GenerationComponent } from './components/generation/generation.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { GamesComponent } from './pages/games/games.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
     GenerationsComponent,
     FooterComponent,
     GenerationComponent,
+    GamesComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
