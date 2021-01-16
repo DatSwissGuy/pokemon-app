@@ -1,9 +1,9 @@
 div.games-list-container {
   display: flex;
   flex-wrap: wrap;
-}
+  justify-content: center;
 
-mat-card {
-  margin: 1rem;
-  width: 250px;
+  mat-card {
+    margin: 1rem;
+  }
 }
