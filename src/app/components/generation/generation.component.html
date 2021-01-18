@@ -1,12 +1,12 @@
 <div class="title-container">
   <mat-card>
-    <mat-card-title>
+    <mat-card-title *ngIf="generation">
       Generation {{formatGenerationName(generation.name)}} Pokémon
     </mat-card-title>
   </mat-card>
 </div>
-<div class="pokemon-list-container">
-  <mat-card *ngFor="let pokemon of generation?.pokemon_species">
+<div *ngIf="generation" class="pokemon-list-container">
+  <mat-card *ngFor="let pokemon of generation.pokemon_species">
     <mat-card-header>
       <mat-card-title>
         {{nameToUpperCase(pokemon.name)}}

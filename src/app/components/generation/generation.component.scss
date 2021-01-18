@@ -10,19 +10,14 @@ div.pokemon-list-container {
   justify-content: center;
 
   mat-card {
-    margin: 1rem;
-
-    mat-card-subtitle {
-      p {
-        margin: 0;
-      }
-    }
+    margin: 16px;
 
     mat-card-content {
       display: flex;
       justify-content: center;
 
       img {
+        margin: 4px;
         width: 150px;
         height: 150px;
       }
