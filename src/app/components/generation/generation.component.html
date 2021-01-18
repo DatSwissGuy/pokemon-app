@@ -1,3 +1,10 @@
+<div class="title-container">
+  <mat-card>
+    <mat-card-title>
+      Generation {{formatGenerationName(generation.name)}} Pokémon
+    </mat-card-title>
+  </mat-card>
+</div>
 <div class="pokemon-list-container">
   <mat-card *ngFor="let pokemon of generation?.pokemon_species">
     <mat-card-header>
@@ -5,12 +12,11 @@
         {{nameToUpperCase(pokemon.name)}}
       </mat-card-title>
       <mat-card-subtitle>
-        <p class="pokemon-card-subtitle">Generation {{formatGenerationName(generation.name)}} Pokémon</p>
         <p class="pokemon-card-subtitle">Main region: {{nameToUpperCase(generation.main_region.name)}}</p>
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img src="{{getPokemonArtworkImage(pokemon.url)}}" alt="">
+      <img mat-card-image src="{{getPokemonArtworkImage(pokemon.url)}}" alt="{{pokemon.name}}">
     </mat-card-content>
   </mat-card>
 </div>
