@@ -16,7 +16,9 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
-    - run: npm run build:ssr
+    - run: npm run build:firebase
+    - run: cd functions
+    - run: npm install
     - uses: w9jds/firebase-action@master
       with:
         args: deploy
