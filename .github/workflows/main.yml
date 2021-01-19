@@ -4,20 +4,14 @@ on:
     branches: [ master ]
 
 jobs:  
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Dependencies
-        run: npm install
-      - name: Build App
-        run: npm run build:firebase
-  
   deploy-function:
     name: Deploy Function
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Build
+      run: npm run build:firebase
     - name: Install npm packages (functions)
       run: |
         cd functions
@@ -35,6 +29,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Build 
+      - run: npm run build:ssr
       - name: Deploy to Firebase Hosting
         uses: w9jds/firebase-action@master
         with:
