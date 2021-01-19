@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,15 +17,16 @@ import { GenerationComponent } from './components/generation/generation.componen
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GamesComponent } from './pages/games/games.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonComponent,
     GenerationsComponent,
     FooterComponent,
     GenerationComponent,
     GamesComponent,
+    HomeComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),

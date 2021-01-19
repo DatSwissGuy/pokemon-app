@@ -1,0 +1,13 @@
+name: Docker-Compose Build
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  docker-compose-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build Docker-Compose
+        run: docker-compose build
