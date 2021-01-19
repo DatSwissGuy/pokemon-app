@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { generationData } from '../../data/generationData';
 
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss']
 })
-export class GamesComponent implements OnInit {
+export class GamesComponent {
 
-  constructor() { }
+  generationData = generationData;
 
-  ngOnInit(): void {
+  constructor() {
   }
-
 }
