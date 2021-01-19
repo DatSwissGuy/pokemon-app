@@ -1,4 +1,5 @@
-![Deployment](https://github.com/DatSwissGuy/pokemon-app/workflows/Deployment/badge.svg?branch=master)
+![Firebase Deployment](https://github.com/DatSwissGuy/pokemon-app/workflows/Firebase%20Deployment/badge.svg?branch=master&event=deployment_status)
+![Docker-Compose Build](https://github.com/DatSwissGuy/pokemon-app/workflows/Docker-Compose%20Build/badge.svg?branch=master)
 
 ---
 
