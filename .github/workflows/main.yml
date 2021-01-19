@@ -14,12 +14,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build:firebase
+        run: npm run build:ssr
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
-          name: functions
-          path: functions
+          name: dist
+          path: dist
   deploy:
     name: Deploy
     needs: build
@@ -30,10 +30,8 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: functions
-          path: functions
-      - name: Install Dependencies
-        run: npm install
+          name: dist
+          path: dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
