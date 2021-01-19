@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  firebase-deploy:
+  deploy-functions:
 
     runs-on: ubuntu-latest
 
@@ -16,11 +16,26 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
-    - run: npm run build:firebase
-    - run: cd functions
-    - run: npm install
+    - run: npm run build:ssr
     - uses: w9jds/firebase-action@master
       with:
-        args: deploy
+        args: deploy --only-functions
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
+
+  deploy-hosting:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: '12.x'
+    - run: npm install
+    - run: npm run build:ssr
+    - uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only-hosting
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
