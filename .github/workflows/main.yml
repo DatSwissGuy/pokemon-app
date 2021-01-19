@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -14,24 +14,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build:ssr
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: dist
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: dist
-          path: dist
+        run: npm run build:firebase
+      - name: Change Directory
+        run: cd functions
+      - name: Install Dependencies (Functions)
+        run: npm install
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
