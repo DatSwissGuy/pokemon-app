@@ -1,13 +1,11 @@
-name: Deployment
+name: Firebase Deployment
 on:
   push:
     branches: [ master ]
 
 jobs:
   firebase-hosting:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@master
     - uses: actions/setup-node@master
@@ -22,9 +20,7 @@ jobs:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
   firebase-functions:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@master
     - uses: actions/setup-node@master
