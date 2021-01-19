@@ -20,8 +20,6 @@ jobs:
       - name: Install Dependencies (Functions)
         run: npm install
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy
+        run: firebase deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
