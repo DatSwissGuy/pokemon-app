@@ -1,33 +1,24 @@
-name: Firebase function deploy
+name: CI
 
-# Controls when the action will run. Triggers the workflow on push
-# events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches:
+    - master
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  firebase-deploy:
+
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    # And of course we need to goto our functions folder to deploy
-    - name: Install npm packages
-      run: |
-        cd functions
-        npm install
-    # Deploying the functions to firebase
-    - name:  Deploy to Firebase
-      uses: w9jds/firebase-action@master
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
       with:
-          args: deploy --only functions
+        node-version: '12.x'
+    - run: npm install
+    - run: npm run build:ssr
+    - uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
       env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
