@@ -31,10 +31,8 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: functions
-          path: functions
-      - name: CD into Functions
-        run: cd functions
+          name: dist
+          path: functions/dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
