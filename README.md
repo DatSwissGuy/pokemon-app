@@ -1,3 +1,7 @@
+![Deployment](https://github.com/DatSwissGuy/pokemon-app/workflows/Deployment/badge.svg?branch=master)
+
+---
+
 ![PokeNgLogo](doc/PokeNg.png)
 
 # Purpose
