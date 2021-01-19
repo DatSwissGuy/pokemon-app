@@ -1,4 +1,4 @@
-export interface PokemonTypes {
+export interface MainRegion {
   name: string;
   url: string;
 }

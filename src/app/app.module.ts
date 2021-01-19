@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,14 +14,17 @@ import { GenerationsComponent } from './pages/generations/generations.component'
 import { MatRippleModule } from '@angular/material/core';
 import { FooterComponent } from './components/footer/footer.component';
 import { GenerationComponent } from './components/generation/generation.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonComponent,
     GenerationsComponent,
     FooterComponent,
     GenerationComponent,
+    HomeComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -35,7 +37,8 @@ import { GenerationComponent } from './components/generation/generation.componen
         MatToolbarModule,
         MatSidenavModule,
         MatListModule,
-        MatRippleModule
+        MatRippleModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
   providers: [],
   bootstrap: [AppComponent]
