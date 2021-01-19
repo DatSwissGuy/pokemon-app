@@ -31,11 +31,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: dist
-          path: functions/dist
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          name: functions
+          path: functions
+      - name: Run pwd
+        run: pwd | ls -la
