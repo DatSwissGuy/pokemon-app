@@ -1,41 +1,42 @@
-name: Firebase Deployment
-
+name: Build and Deploy
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  deploy-functions:
-
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: '12.x'
-    - run: npm install
-    - run: npm run build:ssr
-    - uses: w9jds/firebase-action@master
-      with:
-        args: deploy --only functions
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
-
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build:firebase
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: functions
+          path: functions
   deploy-hosting:
-
+    name: Deploy
+    needs: build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: '12.x'
-    - run: npm install
-    - run: npm run build:ssr
-    - uses: w9jds/firebase-action@master
-      with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_APP_51156 }}
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: functions
+          path: functions
+      - name: CD into Functions
+        run: cd functions
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
