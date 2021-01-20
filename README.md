@@ -7,20 +7,26 @@
 
 # Purpose
 
-Building an Angular SPA for Browsing Pokémon. Consumes the [PokéAPI](https://www.pokeapi.co) RESTful API.
+Building an (a simple) Angular SPA for Browsing Pokémon. Consumes the [PokéAPI](https://www.pokeapi.co) RESTful API. And no, it's not a Pokédex, i might create one someday.
 
 # Screenshots / Progress
 ![Progress-2020-9-13](doc/Screenshot_2020-12-08.png)
-*Initial design / layout for the app, showing the first 151 Pokémon*
+*(September 2020) Initial design / layout for the app, showing the first 151 Pokémon*
 
+Features:
+- Docker Compose setup (September 2020)
+- SSR (September 2020)
+- Initial PWA functionality (02.01.2021)
 - A list of Pokémon from each generation can be selected (19.01.2021)
-- Automatic deployment via GitHub Actions
+- Automatic deployment via GitHub Actions (19.01.2021)
 
 # Demo
 
-Can be found [here](https://pokemon-app-51156.web.app)
+This app is currently hosted on Google Firebase. Server Side Rendering is realized via Firebase Functions. [Have a look](https://pokemon-app-51156.web.app).
 
 # WIPs
+
+This list is in no particular order respectively prioritized.
 
 - This readme needs some work 😅
 - The Docker Compose build action is still a work in progress. The badge only shows that the build was successful. No information regarding tests.
@@ -28,6 +34,6 @@ Can be found [here](https://pokemon-app-51156.web.app)
 - Tests for CD / CI
 - Additional info for each Pokémon (abilities, appearances, stats etc.) 
 
-# Additional Info
+# Journal
 
-I pushed directly into master in order to learn how to setup GitHub actions, that's something that should be avoided at all cost. For me this was quite a challenge to make the automatic deployment work.
+- **(19.01.2021)**: Today i tried to learn `GitHub Actions` in order to automatically deploy the app on Firebase. I pushed directly into master to test wether my configuration would work, that's something that should be avoided at all cost. For me this was quite a challenge but after several hours i came up with a solution. I also added a badge for a succesful deployment 😁. 
