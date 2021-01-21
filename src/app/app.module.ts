@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GenerationComponent } from './components/generation/generation.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { GamesComponent } from './pages/games/games.component';
 import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
     GenerationsComponent,
     FooterComponent,
     GenerationComponent,
+    GamesComponent,
     HomeComponent,
   ],
     imports: [
