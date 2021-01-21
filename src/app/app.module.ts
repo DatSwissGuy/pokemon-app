@@ -13,7 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { GenerationsComponent } from './pages/generations/generations.component';
 import { MatRippleModule } from '@angular/material/core';
 import { FooterComponent } from './components/footer/footer.component';
-import { GenerationComponent } from './components/generation/generation.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GamesComponent } from './pages/games/games.component';
@@ -24,7 +24,7 @@ import { HomeComponent } from './pages/home/home.component';
     AppComponent,
     GenerationsComponent,
     FooterComponent,
-    GenerationComponent,
+    PokemonListComponent,
     GamesComponent,
     HomeComponent,
   ],
