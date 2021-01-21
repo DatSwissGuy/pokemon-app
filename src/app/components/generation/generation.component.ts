@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Generation } from '../../model/items/generation';
+import { wordToUpperCase } from '../../helper-functions/name-to-uppercase';
 
 @Component({
   selector: 'app-generation',
@@ -12,6 +13,7 @@ export class GenerationComponent implements OnInit {
 
   generationId: number;
   generation: Generation;
+  wordToUpperCase = wordToUpperCase;
 
   constructor(
     private pokeApiService: PokeApiService,
@@ -26,14 +28,10 @@ export class GenerationComponent implements OnInit {
     );
   }
 
-  nameToUpperCase(pokemonName: string): string {
-    return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
-  }
-
   formatVersionGroups(versionGroups: Generation): string {
     let versionGroupsString = '';
     versionGroups.version_groups.map(games => versionGroupsString += `${games.name.replace('-', ' ')} `);
-    const gamesArray = versionGroupsString.split(' ').map(games => this.nameToUpperCase(games));
+    const gamesArray = versionGroupsString.split(' ').map(games => this.wordToUpperCase(games));
     const gamesList = gamesArray.join(', ');
     // remove last commma and space
     return gamesList.slice(0, -2);
