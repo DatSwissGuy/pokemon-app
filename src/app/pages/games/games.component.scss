@@ -2,6 +2,17 @@ div.title-container {
   margin: 1rem;
   display: flex;
   justify-content: center;
+
+  mat-card {
+
+    mat-card-title {
+      margin: 0 0 4px 0;
+    }
+
+    mat-card-subtitle {
+      margin: 0;
+    }
+  }
 }
 
 div.games-container {
