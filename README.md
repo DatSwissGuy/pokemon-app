@@ -19,6 +19,7 @@ Features:
 - Initial PWA functionality (02.01.2021)
 - A list of Pokémon from each generation can be selected (19.01.2021)
 - Automatic deployment via GitHub Actions (19.01.2021)
+- List of games up to fith generation (22.01.2021)
 
 # Demo
 
@@ -37,3 +38,5 @@ This list is in no particular order respectively prioritized.
 # Journal
 
 - **(19.01.2021)**: Today i tried to learn `GitHub Actions` in order to automatically deploy the app on Firebase. I pushed directly into master to test wether my configuration would work, that's something that should be avoided at all cost. For me this was quite a challenge but after several hours i came up with a solution. I also added a badge for a succesful deployment 😁. 
+
+- **(22.01.2021)**: Merged some new features (games list, sidebar nav default opened in desktop mode, bugfixes) into master. Automatic is working as intended. I'll have to start thinking about how to further design the app and what features it should have. 
