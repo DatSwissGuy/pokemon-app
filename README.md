@@ -18,22 +18,24 @@ Features:
 - SSR (September 2020)
 - Initial PWA functionality (02.01.2021)
 - A list of Pokémon from each generation can be selected (19.01.2021)
-- Automatic deployment via GitHub Actions (19.01.2021)
+- Automatic deployment via `GitHub Actions` (19.01.2021)
+- List of games up to fith generation (22.01.2021)
 
 # Demo
 
 This app is currently hosted on Google Firebase. Server Side Rendering is realized via Firebase Functions. [Have a look](https://pokemon-app-51156.web.app).
 
+# Installing / Running the App
+
+Clone the repo. Then run `npm install` to install dependencies, after that run `ng serve` to serve the app. 
+
+Alternatively if you have Docker, run `docker-compose up --build` to build and then serve the app on ` localhost:4000`.
+
 # WIPs
 
-This list is in no particular order respectively prioritized.
+This list is in no particular order / respectively prioritized.
 
 - This readme needs some work 😅
-- The Docker Compose build action is still a work in progress. The badge only shows that the build was successful. No information regarding tests.
-- A list of all games with their artwork
+- The Docker Compose badge only shows that the build was successful. No information regarding tests.
 - Tests for CD / CI
-- Additional info for each Pokémon (abilities, appearances, stats etc.) 
-
-# Journal
-
-- **(19.01.2021)**: Today i tried to learn `GitHub Actions` in order to automatically deploy the app on Firebase. I pushed directly into master to test wether my configuration would work, that's something that should be avoided at all cost. For me this was quite a challenge but after several hours i came up with a solution. I also added a badge for a succesful deployment 😁. 
+- A design for the app, it currentyl looks a bit uninspiring.
