@@ -1,15 +1,5 @@
-$mat-toolbar-height: 65px;
+$mat-toolbar-height: 55px;
 $mat-toolbar-width: 200px;
-
-@media (max-width: 600px) {
-
-  mat-toolbar {
-    &.mat-toolbar {
-      display: flex;
-      justify-content: center;
-    }
-  }
-}
 
 mat-toolbar {
 
@@ -21,12 +11,11 @@ mat-toolbar {
     z-index: 10;
     height: $mat-toolbar-height;
     display: flex;
-    justify-content: center;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
   }
 
   .pokeng-logo {
-    height: 50px;
+    height: 40px;
     margin: 0 10px;
   }
 }
@@ -48,7 +37,7 @@ mat-sidenav-container {
 
   mat-sidenav-content {
     position: relative;
-    top: $mat-toolbar-height + 5px;
+    top: $mat-toolbar-height;
     min-height: 100vh;
     margin-bottom: 65 + 5px;
   }
