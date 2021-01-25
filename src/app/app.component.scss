@@ -1,9 +1,11 @@
 $mat-toolbar-height: 55px;
-$mat-toolbar-width: 200px;
+$mat-sidebar-width: 200px;
 
 mat-toolbar {
 
   &.mat-toolbar {
+    background-color: #3d9e3a;
+    color: #fff;
     position: fixed;
     top: 0;
     right: 0;
@@ -14,9 +16,31 @@ mat-toolbar {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
   }
 
-  .pokeng-logo {
+  img.pokeng-logo {
     height: 40px;
-    margin: 0 10px;
+    margin: 0 16px;
+    position: relative;
+    top: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  div.empty-container {
+    width: 100%;
+  }
+
+  div.external-links {
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: #e0e0e0;
+      }
+    }
   }
 }
 
@@ -25,11 +49,11 @@ mat-sidenav-container {
   mat-sidenav {
     position: fixed;
     top: $mat-toolbar-height;
-    width: $mat-toolbar-width;
+    width: $mat-sidebar-width;
 
     mat-nav-list {
 
-      .mat-icon{
+      .mat-icon {
         padding-right: 15px;
       }
     }
@@ -38,7 +62,7 @@ mat-sidenav-container {
   mat-sidenav-content {
     position: relative;
     top: $mat-toolbar-height;
-    min-height: 100vh;
+    min-height: 450px;
     margin-bottom: 65 + 5px;
   }
 }
