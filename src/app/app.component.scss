@@ -63,7 +63,6 @@ mat-sidenav-container {
   mat-sidenav-content {
     position: relative;
     top: $mat-toolbar-height;
-    min-height: 450px;
-    margin-bottom: 65 + 5px;
+    margin-bottom: 65px;
   }
 }
