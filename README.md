@@ -7,7 +7,7 @@
 
 # Purpose
 
-Building an (a simple) Angular SPA for Browsing Pokémon. Consumes the [PokéAPI](https://www.pokeapi.co) RESTful API. And no, it's not a Pokédex, i might create one someday.
+Building an (simple) Angular SPA for Browsing Pokémon. Consumes the [PokéAPI](https://www.pokeapi.co) RESTful API. And no, it's not a Pokédex, i might create one someday.
 
 # Screenshots / Progress
 ![Progress-2020-9-13](doc/Screenshot_2020-12-08.png)
@@ -20,6 +20,7 @@ Features:
 - A list of Pokémon from each generation can be selected (19.01.2021)
 - Automatic deployment via `GitHub Actions` (19.01.2021)
 - List of games up to fith generation (22.01.2021)
+- Route transition animations (26.01.2021)
 
 # Demo
 
