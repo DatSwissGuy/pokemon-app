@@ -1,6 +1,16 @@
 .container {
   margin: 1rem;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+
+  a {
+    color: #3d9e3a;
+  }
+
+  img {
+    margin: 16px;
+    width: 300px;
+  }
 }
