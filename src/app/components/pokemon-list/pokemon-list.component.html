@@ -9,14 +9,14 @@
   <mat-card *ngFor="let pokemon of generation.pokemon_species">
     <mat-card-header>
       <mat-card-title>
-        {{nameToUpperCase(pokemon.name)}}
+        {{wordToUpperCase(pokemon.name)}}
       </mat-card-title>
       <mat-card-subtitle>
-        <p class="pokemon-card-subtitle">Main region: {{nameToUpperCase(generation.main_region.name)}}</p>
+        <p class="pokemon-card-subtitle">Main region: {{wordToUpperCase(generation.main_region.name)}}</p>
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img mat-card-image src="{{getPokemonArtworkImage(pokemon.url)}}" alt="{{pokemon.name}}">
+      <img mat-card-image src="{{getPokemonImage(pokemon.url)}}" alt="{{pokemon.name}}">
     </mat-card-content>
   </mat-card>
 </div>
