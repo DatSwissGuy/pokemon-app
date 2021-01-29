@@ -1,9 +1,17 @@
+div.spacer {
+  height: 3rem;
+}
+
 div.title-container {
   margin: 1rem;
   display: flex;
-  justify-content: center;
+
+  &:before {
+    margin-top: 2rem;
+  }
 
   mat-card {
+    width: 100%;
 
     mat-card-title {
       margin: 0 0 4px 0;
@@ -16,13 +24,52 @@ div.title-container {
 }
 
 div.games-container {
+
+  .red-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png');
+    background-size: cover;
+  }
+
+  .blue-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png');
+    background-size: cover;
+  }
+
+  .yellow-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png');
+    background-size: cover;
+  }
+
+  .gold-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png');
+    background-size: cover;
+  }
+
+  .silver-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png');
+    background-size: cover;
+  }
+
+  .crystal-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png');
+    background-size: cover;
+  }
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   mat-card {
     width: 218px;
     margin: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    height: 100%;
+
+  mat-card-header {
+
+    mat-card-title {
+      font-size: 16px;
+    }
+  }
 
     mat-card-content {
       p {
