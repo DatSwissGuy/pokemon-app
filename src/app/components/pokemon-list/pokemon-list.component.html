@@ -1,6 +1,6 @@
 <div class="title-container">
-  <mat-card>
-    <mat-card-title *ngIf="generation">
+  <mat-card *ngIf="generation">
+    <mat-card-title>
       Generation {{formatGenerationName(generation.name)}} Pokémon
     </mat-card-title>
   </mat-card>
@@ -20,3 +20,4 @@
     </mat-card-content>
   </mat-card>
 </div>
+<app-footer></app-footer>

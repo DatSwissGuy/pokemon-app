@@ -6,10 +6,10 @@ import { wordToUpperCase } from '../../helper-functions/name-to-uppercase';
 
 @Component({
   selector: 'app-generation',
-  templateUrl: './generation.component.html',
-  styleUrls: ['./generation.component.scss']
+  templateUrl: './pokemon-list.component.html',
+  styleUrls: ['./pokemon-list.component.scss']
 })
-export class GenerationComponent implements OnInit {
+export class PokemonListComponent implements OnInit {
 
   generationId: number;
   generation: Generation;
