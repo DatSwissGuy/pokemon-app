@@ -1,13 +1,18 @@
+<mat-icon>back</mat-icon>
 <div class="title-container">
   <mat-card *ngIf="generation">
-    <mat-card-title>
-      Generation {{formatGenerationName(generation.name)}} Pokémon
-    </mat-card-title>
+    <mat-card-header>
+      <mat-card-title>
+        Generation {{formatGenerationName(generation.name)}} Pokémon
+      </mat-card-title>
+
+    </mat-card-header>
   </mat-card>
 </div>
 <div *ngIf="generation" class="pokemon-list-container">
   <mat-card *ngFor="let pokemon of generation.pokemon_species">
     <mat-card-header>
+      <div mat-card-avatar [ngStyle]="{'background-image':'url('+getPokemonSprite(pokemon.url)+')', 'background-size':'cover'}"></div>
       <mat-card-title>
         {{wordToUpperCase(pokemon.name)}}
       </mat-card-title>

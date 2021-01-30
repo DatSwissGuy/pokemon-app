@@ -43,6 +43,13 @@ export class PokemonListComponent implements OnInit {
     return generationName.replace('generation-', '').toUpperCase();
   }
 
+  getPokemonSprite(pokemonUrl: string): string {
+    return pokemonUrl
+      .replace('https://pokeapi.co/api/v2/pokemon-species', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon')
+      .slice(0, -1)
+      .concat('.png');
+  }
+
   getPokemonDreamworldImage(pokemonUrl: string): string {
     return pokemonUrl
       .replace('https://pokeapi.co/api/v2/pokemon-species', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world')

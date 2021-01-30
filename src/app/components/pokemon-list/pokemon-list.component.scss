@@ -1,16 +1,30 @@
 div.title-container {
-  margin: 1rem;
+  margin: 16px;
   display: flex;
+  justify-content: center;
+
+  mat-card {
+
+    mat-card-title {
+      margin: 0 0 4px 0;
+    }
+  }
 }
 
 div.pokemon-list-container {
   display: flex;
   flex-wrap: wrap;
-
-
+  justify-content: center;
 
   mat-card {
     margin: 16px;
+
+    .mat-card-avatar {
+      height: 60px;
+      width: 60px;
+      position: relative;
+      top: -8px;
+    }
 
     mat-card-content {
       display: flex;
@@ -18,8 +32,8 @@ div.pokemon-list-container {
 
       img {
         margin: 4px;
-        width: 150px;
-        height: 150px;
+        width: 176px;
+        height: 176px;
       }
     }
   }
