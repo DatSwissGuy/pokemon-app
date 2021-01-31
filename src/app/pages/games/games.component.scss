@@ -12,6 +12,7 @@ div.title-container {
   }
 
   mat-card {
+    width: 75%;
 
     mat-card-title {
       margin: 0 0 4px 0;
@@ -75,6 +76,41 @@ div.games-container {
 
   .emerald-title-pokemon {
     background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png');
+    background-size: cover;
+  }
+
+  .diamond-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png');
+    background-size: cover;
+  }
+
+  .pearl-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png');
+    background-size: cover;
+  }
+
+  .platinum-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png');
+    background-size: cover;
+  }
+
+  .black-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png');
+    background-size: cover;
+  }
+
+  .white-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png');
+    background-size: cover;
+  }
+
+  .black2-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646-black.png');
+    background-size: cover;
+  }
+
+  .white2-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646-white.png');
     background-size: cover;
   }
 
