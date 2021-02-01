@@ -1,0 +1,12 @@
+<div class="pokedex-list-container">
+  <a *ngFor="let pokedex of pokedexCollection">
+    <mat-card mat-ripple>
+      <mat-card-header>
+        <mat-card-title>
+         {{wordToUpperCase(pokedex.name)}}
+        </mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </a>
+</div>
+<app-footer></app-footer>
