@@ -260,4 +260,57 @@
     </mat-card-content>
   </mat-card>
 </div>
+
+<div class="spacer"></div>
+
+<div class="title-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Generation VI Games</mat-card-title>
+      <mat-card-subtitle>2013 - 2014</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
+<div class="games-container" id="generation-vi">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="x-title-pokemon"></div>
+      <mat-card-title>Pokémon {{generationData['6'].games[0]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['6'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/X_EN_boxart.png" alt="pokemon-x-boxart">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="y-title-pokemon"></div>
+      <mat-card-title>Pokémon {{generationData['6'].games[1]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['6'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/Y_EN_boxart.png" alt="pokemon-y-boxart">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="ruby-title-pokemon"></div>
+      <mat-card-title class="small-font-size">Pokémon {{generationData['6'].games[2]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['6'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/OmegaRuby_EN_boxart.png" alt="pokemon-omegaruby-boxart">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="sapphire-title-pokemon"></div>
+      <mat-card-title class="small-font-size">Pokémon {{generationData['6'].games[3]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['6'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/AlphaSapphire_EN_boxart.png" alt="pokemon-alphasapphire-boxart">
+    </mat-card-content>
+  </mat-card>
+</div>
 <app-footer></app-footer>

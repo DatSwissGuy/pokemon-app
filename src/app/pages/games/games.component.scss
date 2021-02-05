@@ -114,13 +114,31 @@ div.games-container {
     background-size: cover;
   }
 
+  .x-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png');
+    background-size: cover;
+  }
+
+  .y-title-pokemon {
+  background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png');
+  background-size: cover;
+  }
+
   mat-card {
-    width: 280px;
+    width: 284px;
     margin: 1rem;
     padding: 1rem 1rem 0 1rem;
     height: 100%;
 
   mat-card-header {
+
+    mat-card-title {
+      font-size: 20px;
+    }
+
+    mat-card-title.small-font-size {
+      font-size: 17px;
+    }
 
     .mat-card-avatar {
       height: 60px;
@@ -134,7 +152,7 @@ div.games-container {
     mat-card-content {
       display: flex;
       justify-content: center;
-      margin: 16px 0 32px 0;
+      margin: 8px 0 32px 0;
     }
   }
 }
