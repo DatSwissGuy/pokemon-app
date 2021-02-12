@@ -12,7 +12,7 @@ div.title-container {
   }
 
   mat-card {
-    width: 75%;
+    width: 80%;
 
     mat-card-title {
       margin: 0 0 4px 0;
@@ -141,6 +141,16 @@ div.games-container {
 
   .ultramoon-title-pokemon {
     background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/800-dawn.png');
+    background-size: cover;
+  }
+
+  div.mat-card-avatar.letsgopikachu-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png');
+    background-size: cover;
+  }
+
+  .letsgoeevee-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png');
     background-size: cover;
   }
 
