@@ -1,7 +1,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation I Games</mat-card-title>
+      <mat-card-title>Generation I</mat-card-title>
       <mat-card-subtitle>1996 - 1999</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -44,7 +44,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation II Games</mat-card-title>
+      <mat-card-title>Generation II</mat-card-title>
       <mat-card-subtitle>1999 - 2002</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -87,7 +87,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation III Games</mat-card-title>
+      <mat-card-title>Generation III</mat-card-title>
       <mat-card-subtitle>2002 - 2006</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -150,7 +150,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation IV Games</mat-card-title>
+      <mat-card-title>Generation IV</mat-card-title>
       <mat-card-subtitle>2006 - 2010</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -213,7 +213,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation V Games</mat-card-title>
+      <mat-card-title>Generation V</mat-card-title>
       <mat-card-subtitle>2010 - 2013</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -266,7 +266,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation VI Games</mat-card-title>
+      <mat-card-title>Generation VI</mat-card-title>
       <mat-card-subtitle>2013 - 2014</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -319,7 +319,7 @@
 <div class="title-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Generation VII Games</mat-card-title>
+      <mat-card-title>Generation VII</mat-card-title>
       <mat-card-subtitle>2013 - 2014</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -365,6 +365,9 @@
       <img class="mat-elevation-z3" src="assets/boxart/UltraMoon_EN_boxart.png" alt="pokemon-ultramoon-boxart">
     </mat-card-content>
   </mat-card>
+</div>
+
+<div class="games-container" id="generation-vii-switch">
   <mat-card>
     <mat-card-header>
       <div mat-card-avatar class="letsgopikachu-title-pokemon"></div>
@@ -387,4 +390,36 @@
   </mat-card>
 </div>
 
+<div class="spacer"></div>
+
+<div class="title-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Generation VIII</mat-card-title>
+      <mat-card-subtitle>2019</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
+<div class="games-container" id="generation-viii">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="swort-title-pokemon"></div>
+      <mat-card-title class="small-font-size">{{generationData['8'].games[0]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['8'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/Sword_EN_boxart.png" alt="pokemon-sword-boxart">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="shield-title-pokemon"></div>
+      <mat-card-title class="small-font-size">{{generationData['8'].games[1]}}</mat-card-title>
+      <mat-card-subtitle>{{generationData['8'].platform}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="mat-elevation-z3" src="assets/boxart/Shield_EN_boxart.png" alt="pokemon-shield-boxart">
+    </mat-card-content>
+  </mat-card>
+</div>
 <app-footer></app-footer>

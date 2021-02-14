@@ -12,7 +12,7 @@ div.title-container {
   }
 
   mat-card {
-    width: 80%;
+    width: 90%;
 
     mat-card-title {
       margin: 0 0 4px 0;
@@ -135,12 +135,12 @@ div.games-container {
   }
 
   .ultrasun-title-pokemon {
-    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/800-dusk.png');
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10155.png');
     background-size: cover;
   }
 
   .ultramoon-title-pokemon {
-    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/800-dawn.png');
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10156.png');
     background-size: cover;
   }
 
@@ -151,6 +151,16 @@ div.games-container {
 
   .letsgoeevee-title-pokemon {
     background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png');
+    background-size: cover;
+  }
+
+  .swort-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png');
+    background-size: cover;
+  }
+
+  .shield-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png');
     background-size: cover;
   }
 
