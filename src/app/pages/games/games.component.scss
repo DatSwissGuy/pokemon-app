@@ -12,7 +12,7 @@ div.title-container {
   }
 
   mat-card {
-    width: 75%;
+    width: 90%;
 
     mat-card-title {
       margin: 0 0 4px 0;
@@ -114,27 +114,85 @@ div.games-container {
     background-size: cover;
   }
 
+  .x-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png');
+    background-size: cover;
+  }
+
+  .y-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png');
+    background-size: cover;
+  }
+
+  .sun-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/791.png');
+    background-size: cover;
+  }
+
+  .moon-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/792.png');
+    background-size: cover;
+  }
+
+  .ultrasun-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10155.png');
+    background-size: cover;
+  }
+
+  .ultramoon-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10156.png');
+    background-size: cover;
+  }
+
+  div.mat-card-avatar.letsgopikachu-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png');
+    background-size: cover;
+  }
+
+  .letsgoeevee-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png');
+    background-size: cover;
+  }
+
+  .swort-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png');
+    background-size: cover;
+  }
+
+  .shield-title-pokemon {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png');
+    background-size: cover;
+  }
+
   mat-card {
-    width: 280px;
+    width: 284px;
     margin: 1rem;
     padding: 1rem 1rem 0 1rem;
     height: 100%;
 
-  mat-card-header {
+    mat-card-header {
 
-    .mat-card-avatar {
-      height: 60px;
-      width: 60px;
-      border-radius: 0;
-      position: relative;
-      top: -8px;
+      mat-card-title {
+        font-size: 20px;
+      }
+
+      mat-card-title.small-font-size {
+        font-size: 17px;
+      }
+
+      .mat-card-avatar {
+        height: 60px;
+        width: 60px;
+        border-radius: 0;
+        position: relative;
+        top: -8px;
+      }
     }
-  }
 
     mat-card-content {
       display: flex;
       justify-content: center;
-      margin: 16px 0 32px 0;
+      margin: 8px 0 32px 0;
     }
   }
 }
