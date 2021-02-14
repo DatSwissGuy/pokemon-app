@@ -38,7 +38,7 @@ export const generationData = {
   7: {
     firstPokemon: 722,
     lastPokemon: 809,
-    games: ['Sun', 'Moon', 'Ultra Sun', 'Ultra Moon', 'Pokémon Let\'s Go, Pickachu!', 'Pokémon Let\'s Go, Eevee!'],
+    games: ['Sun', 'Moon', 'Ultra Sun', 'Ultra Moon', 'Let\'s Go, Pickachu!', 'Let\'s Go, Eevee!'],
     platform: ['Nintendo 3DS', 'Nintendo Switch']
   },
   8: {
