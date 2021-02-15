@@ -20,4 +20,10 @@ export class PokedexesComponent implements OnInit {
       pokeApiResponse => this.pokedexCollection = pokeApiResponse.results
     );
   }
+
+  removeHyphenFromPokedexName(pokedexName: string): string {
+    const pokedexNameWithoutHyphen = pokedexName.replace('-', ' ');
+    const pokedexArray = pokedexNameWithoutHyphen.split(' ').map(games => this.wordToUpperCase(games));
+    return pokedexArray.join(' ');
+  }
 }
