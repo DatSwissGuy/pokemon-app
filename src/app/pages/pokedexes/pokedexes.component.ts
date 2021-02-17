@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../../services/poke-api.service';
 import { wordToUpperCase } from '../../helper-functions/name-to-uppercase';
+import { PokedexCollection } from '../../model/collections/pokedex-collection';
 
 @Component({
   selector: 'app-pokedexes',
@@ -9,7 +10,7 @@ import { wordToUpperCase } from '../../helper-functions/name-to-uppercase';
 })
 export class PokedexesComponent implements OnInit {
 
-  pokedexCollection: any[];
+  pokedexCollection: PokedexCollection[];
   wordToUpperCase = wordToUpperCase;
 
   constructor(private pokeApiService: PokeApiService) {
