@@ -15,6 +15,7 @@ export class PokeApiService {
   pokeApi = 'https://pokeapi.co/api/v2';
   pokemonEndpoint = 'pokemon';
   generationEndpoint = 'generation';
+  pokedexEndpoint = 'pokedex';
   // Returns the first 251 Pokémon (Gen 1+2)
   offset = 0;
   limit = 251;
@@ -49,6 +50,14 @@ export class PokeApiService {
 
   getGeneration(generationId: number): Observable<Generation> {
     return this.http.get<any>(`${this.pokeApi}/${this.generationEndpoint}/${generationId}`)
+      .pipe(
+        map(response => response),
+        take(1)
+      );
+  }
+
+  getPokedexCollection(): Observable<PokeApiResponse<any>> {
+    return this.http.get<any>(`${this.pokeApi}/${this.pokedexEndpoint}`)
       .pipe(
         map(response => response),
         take(1)

@@ -18,6 +18,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GamesComponent } from './pages/games/games.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PokedexesComponent } from './pages/pokedexes/pokedexes.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './pages/home/home.component';
     PokemonListComponent,
     GamesComponent,
     HomeComponent,
+    PokedexesComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
