@@ -10,7 +10,7 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <img class="mat-elevation-z3" *ngFor="let boxart of returnBoxartForGeneration(generationItem.name)" src="{{boxart}}">
+        <img *ngFor="let boxart of returnBoxartForGeneration(generationItem.name)" src="{{boxart}}">
      </mat-card-content>
     </mat-card>
   </a>

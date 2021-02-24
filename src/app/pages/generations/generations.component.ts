@@ -32,52 +32,53 @@ export class GenerationsComponent implements OnInit {
     switch (generationName.substring(11)) {
       case 'i':
         return [
-          '../../../assets/boxart/Red_EN_boxart.png',
-          '../../../assets/boxart/Blue_EN_boxart.png',
-          '../../../assets/boxart/Yellow_EN_boxart.png'
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png',
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
         ];
       case 'ii': return [
-        '../../../assets/boxart/Silver_EN_boxart.png',
-        '../../../assets/boxart/Gold_EN_boxart.png',
-        '../../../assets/boxart/Crystal_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png'
       ];
       case 'iii': return [
-        '../../../assets/boxart/Ruby_EN_boxart.png',
-        '../../../assets/boxart/Sapphire_EN_boxart.png',
-        '../../../assets/boxart/Emerald_EN_boxart.png',
-        '../../../assets/boxart/FireRed_EN_boxart.png',
-        '../../../assets/boxart/LeafGreen_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
       ];
       case 'iv': return [
-        '../../../assets/boxart/Diamond_EN_boxart.png',
-        '../../../assets/boxart/Pearl_EN_boxart.png',
-        '../../../assets/boxart/Platinum_EN_boxart.png',
-        '../../../assets/boxart/HeartGold_EN_boxart.png',
-        '../../../assets/boxart/SoulSilver_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png',
       ];
       case 'v': return [
-        '../../../assets/boxart/Black_EN_boxart.png',
-        '../../../assets/boxart/White_EN_boxart.png',
-        '../../../assets/boxart/Black2_EN_boxart.png',
-        '../../../assets/boxart/White_2_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646-black.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646-white.png'
       ];
       case 'vi': return [
-        '../../../assets/boxart/X_EN_boxart.png',
-        '../../../assets/boxart/Y_EN_boxart.png',
-        '../../../assets/boxart/OmegaRuby_EN_boxart.png',
-        '../../../assets/boxart/AlphaSapphire_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png'
       ];
       case 'vii': return [
-        '../../../assets/boxart/Sun_EN_boxart.png',
-        '../../../assets/boxart/Moon_EN_boxart.png',
-        '../../../assets/boxart/UltraSun_EN_boxart.png',
-        '../../../assets/boxart/UltraMoon_EN_boxart.png',
-        '../../../assets/boxart/LetsGoPikachu_EN_boxart.png',
-        '../../../assets/boxart/LetsGoEevee_EN_boxart.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/791.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/792.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10155.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10156.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png'
       ];
       case 'viii': return [
-        '../../../assets/boxart/Sword_EN_boxart.png',
-        '../../../assets/boxart/Shield_EN_boxart.png'
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png',
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png'
+
       ];
     }
   }
