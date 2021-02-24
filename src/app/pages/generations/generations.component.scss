@@ -9,7 +9,7 @@ div.generation-list-container {
 
   mat-card {
     margin: 1rem;
-    width: 200px;
+    width: 240px;
     cursor: pointer;
 
     &:focus {
@@ -21,10 +21,14 @@ div.generation-list-container {
       border-radius: initial;
     }
 
-    img {
-      width: 200px;
-      height: 200px;
-      padding: 20px;
+    mat-card-content {
+
+      img {
+        width: 100px;
+        margin: 8px;
+      }
     }
+
+
   }
 }

@@ -3,52 +3,76 @@ export const enhancedGenerationData = {
      firstPokemon: 1,
      lastPokemon: 151,
      games: [
-       { Red: 'Charizard' },
-       { Blue: 'Blastoise' },
-       { Yellow: 'Pikachu' }
+       { Red: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'},
+       { Blue: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png'},
+       { Yellow: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'}
      ],
      platform: 'Game Boy'
   },
   2: {
     firstPokemon: 152,
     lastPokemon: 251,
-    games: ['Silver', 'Gold', 'Crystal'],
+    games: [
+      { Silver: ''},
+      { Gold: ''},
+      { Crystal: ''}
+      ],
     platform: 'Game Boy Color'
   },
   3: {
     firstPokemon: 252,
     lastPokemon: 386,
-    games: ['Ruby', 'Sapphire', 'Emerald', 'FireRed', 'LeafGreen'],
+    games: [
+      { Ruby: ''},
+      { Sapphire: ''},
+      { Emerald: ''},
+      { FireRed: ''},
+      { LeafGreen: ''}
+    ],
     platform: 'Game Boy Advance'
   },
   4: {
     firstPokemon: 384,
     lastPokemon: 493,
-    games: ['Diamond', 'Pearl', 'Platinum', 'HeartGold', 'SoulSilver'],
+    games: [
+      { Diamond: ''},
+      { Pearl: ''},
+      { Platinum: ''},
+      { HeartGold: ''},
+      { SoulSilver: ''}
+    ],
     platform: 'Game Boy Advance'
   },
   5: {
     firstPokemon: 494,
     lastPokemon: 649,
-    games: ['Black', 'White', 'Black 2', 'White 2'],
+    games: [
+      'Black', 'White', 'Black 2', 'White 2'
+    ],
     platform: 'Nintendo DS'
   },
   6: {
     firstPokemon: 650,
     lastPokemon: 721,
-    games: ['X', 'Y', 'Omega Ruby', 'Alpha Sapphire'],
+    games: [
+      'X', 'Y', 'Omega Ruby', 'Alpha Sapphire'
+    ],
     platform: 'Nintendo 3DS'
   },
   7: {
     firstPokemon: 722,
     lastPokemon: 809,
-    games: ['Sun', 'Moon', 'Ultra Sun', 'Ultra Moon', 'Let\'s Go, Pickachu!', 'Let\'s Go, Eevee!'],
+    games: [
+      'Sun', 'Moon', 'Ultra Sun', 'Ultra Moon', 'Let\'s Go, Pickachu!', 'Let\'s Go, Eevee!'
+    ],
     platform: ['Nintendo 3DS', 'Nintendo Switch']
   },
   8: {
     firstPokemon: 810,
     lastPokemon: 898,
-    games: ['Sword', 'Shield'],
+    games: [
+      'Sword', 'Shield'
+    ],
     platform: 'Nintendo Switch'
   }
 };
