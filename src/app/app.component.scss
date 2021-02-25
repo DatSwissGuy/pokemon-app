@@ -46,6 +46,7 @@ mat-toolbar {
 }
 
 mat-sidenav-container {
+  height: 100%;
 
   mat-sidenav {
     position: fixed;
@@ -53,6 +54,10 @@ mat-sidenav-container {
     width: $mat-sidebar-width;
 
     mat-nav-list {
+      p {
+        text-align: center;
+        margin: 1rem;
+      }
 
       .mat-icon {
         padding-right: 15px;
@@ -66,3 +71,5 @@ mat-sidenav-container {
     margin-bottom: 65px;
   }
 }
+
+

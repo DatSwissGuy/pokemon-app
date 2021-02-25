@@ -9,8 +9,8 @@ div.generation-list-container {
 
   mat-card {
     margin: 1rem;
-    width: 200px;
-    cursor: pointer;
+    width: 240px;
+    height: 260px;
 
     &:focus {
       outline: none;
@@ -21,10 +21,17 @@ div.generation-list-container {
       border-radius: initial;
     }
 
-    img {
-      width: 200px;
-      height: 200px;
-      padding: 20px;
+    mat-card-content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      img {
+        height: 72px;
+        margin: 4px;
+      }
     }
+
+
   }
 }

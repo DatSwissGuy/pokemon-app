@@ -24,6 +24,7 @@
 <mat-sidenav-container class="mat-sidenav-container">
   <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches">
     <mat-nav-list>
+      <p>Browse Pokémon by...</p>
       <a mat-list-item [routerLink]="'generations'">
         <mat-icon class="mat-icon">groups</mat-icon>
         GENERATIONS</a>
