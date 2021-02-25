@@ -46,6 +46,7 @@ mat-toolbar {
 }
 
 mat-sidenav-container {
+  height: 100%;
 
   mat-sidenav {
     position: fixed;
@@ -70,3 +71,5 @@ mat-sidenav-container {
     margin-bottom: 65px;
   }
 }
+
+
