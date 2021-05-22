@@ -5,12 +5,12 @@ div.generation-list-container {
 
   a {
     text-decoration: none;
+    height: fit-content;
   }
 
   mat-card {
     margin: 1rem;
     width: 240px;
-    height: 260px;
 
     &:focus {
       outline: none;
